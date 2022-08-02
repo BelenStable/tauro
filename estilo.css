@@ -17,7 +17,7 @@ h1{
 nav{
     text-align: center;
     font-family: 'Roboto Mono', monospace;
-    height:
+    
 }
 
 
@@ -182,6 +182,54 @@ ul{
     position: relative;
     top: 70px;
 }
+
+
+/* carta */
+
+.carta{
+    background-color: #283618;
+    font-family:'EB Garamond', serif;
+}
+
+.carta h1{
+    font-size: 40px;
+}
+
+.main-carta h2{
+    color: #daaa74;
+
+}    
+
+
+
+.lista-iced li{
+    background-color:#283618;
+    display: block;
+    font-size: 20px;
+}
+    
+.lista-iced h3{
+    color: #daaa74;
+}
+
+.lista-te{
+    background-color:#283618;
+    display: block;
+    font-family:'EB Garamond', serif;
+}
+
+.lista-te h4{
+    color:#daaa74;
+    font-family:'EB Garamond', serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
 
 
 /* header contacto */
