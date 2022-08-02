@@ -4,67 +4,105 @@
        
 }
  
+
+.contenedor{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: repeat(4, fr);
+
+    grid-template-areas: 
+    "primerbloque"
+    "atelier"
+    "cafeteria"
+    "footer"
+    ;
+}
+
  /* index header */ 
 
-h1{
+ .primerbloque{
+    background-image: url(../assets/fondooo.jpg);
+    background-position: center;       
+    height: 700px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: primerbloque;
+    
+}
+
+.primerbloque h1{
     color:#daaa74;
     font-family: 'EB Garamond', serif;  
     text-align: center;
     font-size: 150px;
+    
+    animation-name: fade-in;
+    animation-duration: 1s;
    
     }
 
 nav{
     text-align: center;
     font-family: 'Roboto Mono', monospace;
-    
+
 }
 
 
-.primerbloque{
-    background-image: url(../assets/fondooo.jpg);
-    background-position: center;       
-    height: 700px;
-
+.primerbloque nav{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     
 }
+    
 
 li{
     display: inline-block;
     
-}
-    
+}    
 
 ul li a{
     color:#daaa74;
     font-family: 'Roboto Mono', monospace;
-    font-size: 15px;     
+    font-size: 20px;     
     display: inline-block;
-    margin-top: 10px; 
-    margin-right: 5px;
     margin-left: 10px;
+    text-align: center;
+
     text-decoration: none;
        
 } 
+
+ul li a:hover{
+    color: #FEFAE0;
+
+}
+
    
 ul{
     list-style-type: none;
    
 }
 
+
+
 /* index main */ 
 
 .atelier{
-    text-align: left;
+    height: 700px;
+    
     background-color: #DDA15E;
     font-family: 'Roboto Mono', monospace;   
     border: 15px;
     border-style: solid;
     border-color: whitesmoke;
+    display: flex;
+
+    grid-area: atelier;
     
 }
 
@@ -76,25 +114,35 @@ ul{
     font-family: 'EB Garamond', serif;
     color: #283618;
     
+    
 }
 
 .atelier p{
     color: #283618;
-    font-size: 'Roboto Mono', monospace;
-    font-size: 20px;
+    font-family:'EB Garamond', serif ;
+    font-size: 30px;
     position: relative;
-    bottom: 250px;
-    left: 150px;
-         
+    display: flex;
+    top: 450px;
+    right: 850px;
+    
+   
+        
 }
 
 .atelier img{
     width: 500px;
     height: 500px;
-    border-radius: 200px;
+    border-radius: 350px;
     position: relative;
-    left: 700px;
-    bottom: 30px;
+    left: 120px;
+    top: 100px;
+    
+
+    border: #283618;
+    border-style:groove;
+    display: flex;
+    
         
 }
 
@@ -102,190 +150,485 @@ ul{
 .cafe-imagenes{
     background-color: #283618;
     display: flex;
+    justify-content: center;
     
 }
 
 .cafe-imagenes img{
     background-color: #283618;
-    height: 350px;
-    width: 350px;
+    height: 330px;
+    width: 330px;
     border-radius: 100px;
     position: relative;
-    left: 600px;
-    bottom: 80px;
-    margin-left: 10px;
+    bottom: 40px;
+    left: 200px;
     
+    display:flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+    border-color: #daaa74;
+    border-style:groove;
     
     
     
 }
 
-.cafe-boton{
+.cafeteria{
     background-color:#283618;
     color: #daaa74;
     font-family: 'EB Garamond', serif;
+    display: flex;
+
+    grid-area: cafeteria;
 
 }
 
-.cafe-boton h3{
+.cafeteria h3{
     font-size: 60px;
     position: relative;
-    left: 100px;
+    left: 50px;
     top: 100px;
 
 }
 
-.cafe-boton p{
+.cafeteria p{
     font-size: 30px ;
     position: relative;
-    left: 200px;
-    top: 100px;
+    right: 290px;
+    top: 170px;
 }
     
 .boton{
     background-color: #daaa74;
     color: #283618;
-    font-size: 5px;
+    font-size: 25px;
     position: relative;
-    left: 220px;
-    top:150px;
     text-decoration: none;     
-    border-radius: 10px;
+    border-radius: 30px;
+    right: 460px;
+    top:250px
     
+
+    
+    
+    
+}
+
+.boton:hover{
+    background-color: #FEFAE0;
+
+
 }
 
 .boton a{
     text-decoration: none;
     color:#283618;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'EB Garamond', serif;
     
 }
 
 /* index footer */ 
 
+.footer{
+    grid-area: footer;
+}
+
+    
+
 .footer-tauro{
     background-color: #000000;
     color:#daaa74;
-    height: 200px;
-    
+    height: 250px;
 }
 
-.footer-tauro h4{
-    font-size: 50px;
-    position: relative;
-    right: 200px;
-}
+
 
 .footer-tauro p{
     font-size: 25px;
     position: relative;
-    top: 70px;
+    top: 20px;
 }
 
+/* estilos de carta */
 
-/* carta */
-
-.carta{
-    background-color: #283618;
-    font-family:'EB Garamond', serif;
-}
-
-.carta h1{
-    font-size: 40px;
-}
-
-.main-carta h2{
-    color: #daaa74;
-
-}    
-
-
-
-.lista-iced li{
-    background-color:#283618;
-    display: block;
-    font-size: 20px;
-}
+.contenedor-body{
+    display: grid;
+    grid-template-columns: (1,fr);
+    grid-template-rows: repeat(4, fr);
     
-.lista-iced h3{
-    color: #daaa74;
+    grid-template-areas:
+    "nav-carta"
+    "contenedor-carta"
+    "contenedor-carta2"
+    "footer-carta"
+    ;
+
+}
+
+.contenedor-carta{
+    background-color: #283618;
+    height: 400px;
+    display: flex;
+
+    grid-area: contenedor-carta;
+
+}
+
+.nav-carta{
+    background-color:#daaa74;
+    color:#000000;
+    
+    grid-area: nav-carta;
+
+}
+
+.nav-carta h1{
+    color: #283618;
+    font-size: 75px;
+}
+
+.nav-carta a{
+    color: #283618;
+}
+
+
+.lista-cafe{
+    background-color:#8d591d;
+    color:#000000;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    left: 100px;
+
+}
+
+.lista-cafe p{
+    color: #283618;
+    font-size: 30px;
+    text-align: center;
+    font-family:'EB Garamond', serif;
+
+}
+
+
+.lista-icedcoffee{
+    background-color:#daaa74;
+    color:#000000;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    bottom: 180px;
+    left: 100px;
+    
+}
+
+.lista-icedcoffee p{
+    color: #283618;
+    font-size: 30px;
+    text-align: center;
 }
 
 .lista-te{
-    background-color:#283618;
+    background-color: #8d591d;
+    color: #000000;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    bottom: 105px;
+    left: 100px;
+    
+}   
+    
+.lista-te p{
+    color: #283618;
+    font-size: 30px;
+    text-align: center;
+}
+
+.lista-cafe ul li{
     display: block;
-    font-family:'EB Garamond', serif;
+    font-size: 18px;
+    margin-top: 5px;
+
+}
+    
+
+.lista-icedcoffee ul li{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-.lista-te h4{
+.lista-te ul li{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contenedor-carta2{
+    background-color: #daaa74;
+    display: flex;
+    height: 400px;
+    
+    grid-area: contenedor-carta2;
+}
+
+
+.brunch{
+    background-color:#8d591d;
+    height: 320px;
+    width: 320px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+
+    margin: 10px;
+    padding: 10px;
+    left: 100px;
+}
+
+.brunch p{
+    color: #283618;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+
+.brunch ul li{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+  
+}
+
+.tortas{
+    background-color: #283618;
+    width: 320px;
+    height: 320px;
+    border-radius: 15px;
+    top: 30px;
+
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    left: 100px;
+     
+}
+
+.tortas p{
     color:#daaa74;
-    font-family:'EB Garamond', serif;
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.tortas ul li{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+
+}
+
+.jugos{
+    background-color:#8d591d;
+    height: 320px;
+    width: 320px;
+    border-radius: 10px;
+
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    left: 100px;
+
+}
+
+.jugos p{
+    color: #283618;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.jugos ul li{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+
+}
+
+.footer-carta{
+    background-color:#283618;
+    height: 100px;
+
+    grid-area: footer-carta;
+    
+    
+
+} 
+
+.footer-carta p{
+    animation-name: fade-in;
+    animation-duration: 1s;
+
+
 }
 
 
+@keyframes fade-in{
+    0% {
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
 
 
+.footer-carta p{
+    color: #DDA15E;
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    top: 10px;
+    font-family:'EB Garamond', serif;
 
-
-
-
+}
 
 /* header contacto */
 
-.contacto-encabezado{
-    color:#FEFEE3;
-    font-family: 'EB Garamond', serif;
-    font-size: 35px;
+.contenedor-contacto{
+    display: grid;
+
+    grid-template-columns: repeat(1,fr);
+    grid-template-rows: repeat(3,fr);
+    
+    grid-template-areas: 
+    "contacto-nav"
+    "main-contacto"
+    "footer-contacto"
+    ;
 }
 
 .contacto-nav{
-    background-image: url(../assets/fondooo.jpg);
+    background-color: #000000;
     height: 150px;
     text-align: center;
     font-size: 40px;
+    display: block;
+
+    grid-area: contacto-nav;
 }
 
 .contacto-nav h3{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-   
+    color:aliceblue;
+    font-family:'EB Garamond', serif; 
+    
 }
 
 /* main contacto */
 
 .main-contacto{
+    background-image: url(../assets/fondo1.jpg);
+    opacity: 0.9;
     position: relative;
-    height: 300px;
+    height: 400px;
     font-size: 25px;
     font-family: 'Roboto Mono', monospace;
+    display: block;
+    text-align: center;
+    color: #FEFAE0;
+
+    grid-area: main-contacto;
+}
+
+.nombre-contacto{
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    left: 30px;
+    color:#daaa74;
     
 }
 
-.formulario{
+.mail-contacto{
     position: relative;
-    right: 250px;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    right: 10px;
+    border-radius: 15px;
+    color:#daaa74;
+    
+}
+
+.mensaje-mail{
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    left: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color:#daaa74;
+    
+}
+
+.casilla-mensaje{
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    left: 30px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.boton-enviar{
+    border-radius: none;
+    background-color:#daaa74;
+    height: 25px;
+    width: 50px;
+    position: relative;
+    left: 50px;
+
+}
+
+.boton-enviar:hover{
+    background-color: #FEFAE0;
 }
 
 /* footer contacto */
 
 .footer-contacto h4{
-    color:rgb(16, 80, 53);
+    color:#daaa74;
     text-align: center;
     font-size: 30px;
     position: relative;
-    top: 100px;              
+    top: 50px;     
+    font-family:'EB Garamond', serif; 
 }
 
 .footer-contacto{
-    
     background-color: #000000;
     height: 150px;
-    
+
+    grid-area: footer-contacto;
 }
+
 
 /* ceramica header */
 
@@ -306,6 +649,7 @@ ul{
 .main-tienda{
     background-color: #000000;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -332,6 +676,7 @@ ul{
     height: 200px;
     width: 200px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -348,6 +693,7 @@ ul{
     height: 200px;
     width: 200px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -357,7 +703,6 @@ ul{
     height: 150px;
     width: 150px;
     
-
 }
 
 .contenedor-tienda3{
@@ -374,7 +719,6 @@ ul{
     height: 150px;
     width: 150px;
     
-
 }
 
 .contenedor-tienda4{
@@ -391,7 +735,6 @@ ul{
     height: 150px;
     width: 150px;
     
-
 }
 
 .encabezado-ceramica{
@@ -408,15 +751,126 @@ ul{
 
 }
 
-
-.nav-coworking{
-    color: rgb(16, 80, 53);
+.coworking{
+    background-color: #283618;
 }
+
+.coworking h1{
+    font-size: 70px;
+    color:#daaa74;
+}
+
+.main-coworking{
+    background-color: #000000;
+    height: 500px;
+}
+
+.img-coworking{
+    height: 400px;
+    width: 400px;
+   
+}
+
+
+.footer-coworking{
+    background-color:#283618;
+    height: 150px;
+    color:#daaa74
+}
+
 
 /* body taller de ceramica */
 
 .taller-ceramica{
     background-color: #283618;
     height: 800px;
+
+}
+
+
+
+@media screen and (max-width:480px) {
+
+.primerbloque h1{
+
+    font-size: 200px;
+
+    }
+
+
+     .primerbloque nav{
+        display: flex;
+        flex-direction: column;
+     }
+
+    
+ 
+    .atelier h2{
+        font-size: 120px;
+        display: flex;
+
+    }
+
+    .atelier img{
+    right: 50px;
+
+    }
+
+
+    .atelier p{
+        font-size: 40px;
+        
+    }
+
+    .cafeteria{
+        height: 350px;
+    
+    }
+
+    .cafe-imagenes img{
+        
+        height: 230px;
+        width: 230px;
+        border-radius: 150px;
+            
+        
+    }
+    
+    .cafeteria h3{
+        font-size: 80px;
+        left: 300px;
+        bottom: 50px;
+        
+    
+    }
+    
+    .cafeteria p{
+        font-size: 50px ;
+        position: relative;
+        
+    }
+
+
+    .boton{
+        font-size: 25px;
+        border-radius: 30px;
+    
+    }
+
+    .boton a{
+        font-size: 10px;
+        
+        
+    }
+
+
+    .footer-tauro p{
+        font-size: 30px;
+        left: 120px;
+
+    }
+    
+
+
 
 }
