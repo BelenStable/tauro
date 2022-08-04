@@ -116,7 +116,7 @@ ul{
     flex-direction: column;
     justify-content: center;
     text-align: start;
-    margin-left: 100px;
+    
    
 
 }
@@ -133,9 +133,9 @@ ul{
     border-style:groove;
     border-color: #000000;
     display: flex;
-    margin-right: 120px;
+    margin-left: 50px;
     margin-top: 25px;
-
+   
 }
 
 .cafe-imagenes{
@@ -192,13 +192,14 @@ ul{
     
 .boton{
     background-color: #daaa74;
+    height: 40px;
+    width: 100px;
     color: #283618;
-    font-size: 25px;
     position: relative;
     text-decoration: none;     
     border-radius: 30px;
     right: 460px;
-    top:250px
+    top:240px
     
     
 }
@@ -815,7 +816,8 @@ ul{
 
 @media screen and (max-width:480px) {
 
-.primerbloque h1{
+
+    .primerbloque h1{
 
     font-size: 200px;
 
@@ -823,7 +825,7 @@ ul{
 
 
      .primerbloque nav{
-        display: flex;
+        display:block;
         flex-direction: column;
      }
 
@@ -846,54 +848,41 @@ ul{
         
     }
 
-    .cafeteria{
-        height: 350px;
-    
-    }
+
 
     .cafe-imagenes img{
+        background-color: #283618;
+        height: 150px;
+        width: 150px;
         
-        height: 230px;
-        width: 230px;
-        border-radius: 150px;
-            
         
-    }
-    
-    .cafeteria h3{
-        font-size: 80px;
-        left: 300px;
-        bottom: 50px;
+        display:flex;
+        justify-content: space-between;
         
-    
-    }
-    
-    .cafeteria p{
-        font-size: 50px ;
-        position: relative;
-        
-    }
 
+        
+      } 
 
+   
     .boton{
-        font-size: 25px;
-        border-radius: 30px;
-    
+        height: 15px; 
+        width: 15px;
+
     }
+
+
 
     .boton a{
-        font-size: 10px;
-        
-        
+            text-decoration: none;
+            color:#283618;
+            font-size: 20px;
+            font-family: 'EB Garamond', serif;
+            
+    }
+
     }
 
 
-    .footer-tauro p{
-        font-size: 30px;
-        left: 120px;
-
-    }
-    
 
 
 
